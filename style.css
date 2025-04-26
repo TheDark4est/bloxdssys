@@ -1,0 +1,300 @@
+:root {
+    --c1: #393737;
+    --c2: #8971d0;
+    --c3: #7dace4;
+    --c4: #95dce8;
+    --c5: #e3fff8;
+    --c6: #e98f58;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: var(--c5);
+    color: var(--c1);
+    margin: 0;
+    padding: 20px;
+}
+
+/* 顶部横幅样式 */
+.header-banner {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.banner-content {
+    position: relative;
+    flex: 3;
+}
+
+.banner-content img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: opacity 0.5s; /* 添加渐变效果 */
+}
+.banner-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 3px 3px 5px var(--c1);
+    font-size: 2.5em;
+}
+
+.banner-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: text-shadow 0.3s;
+}
+
+.banner-title a:hover {
+    text-shadow: 0 0 15px var(--c4);
+}
+
+/* 运势卡片样式 */
+.fortune-card {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.fortune-card:hover {
+    transform: translateY(-5px);
+}
+
+.fortune-header {
+    border-bottom: 2px solid var(--c2);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.fortune-content {
+    display: grid;
+    gap: 10px;
+}
+
+.fortune-item {
+    padding-left: 20px;
+    border-radius: 10px;
+}
+
+.auspicious {
+    background: var(--c4);
+}
+
+.taboo {
+    background: var(--c6);
+}
+
+/* 内容区域样式 */
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: var(--c2);
+}
+
+a {
+    color: var(--c2);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--c3);
+}
+
+/* 新增导航链接样式 */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    margin-top: 0px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: var(--c2);
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background: var(--c4);
+    transform: translateY(-2px);
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    transition: fill 0.3s;
+}
+
+/* 调整横幅标题下边距 */
+.banner-title {
+    margin-bottom: 50px; /* 为导航栏留出空间 */
+}
+
+/* 合作服务器专用样式 */
+.server-item {
+    background: var(--c5);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: grid;
+    grid-template-rows: 180px auto;
+}
+
+.server-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.server-image {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.server-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 100%);
+}
+
+.server-content {
+    padding: 20px;
+    background: var(--c5);
+}
+
+.server-title {
+    margin: 0 0 15px;
+    font-size: 1.4em;
+}
+
+.server-title a {
+    color: var(--c2);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.link-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.server-title a:hover {
+    color: var(--c3);
+}
+
+.server-info {
+    display: grid;
+    gap: 12px;
+}
+
+.server-description {
+    color: var(--c1);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.server-tags {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.server-tags li {
+    background: var(--c4);
+    color: var(--c1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+/* 通用头部样式 */
+.server-header {
+    height: 200px;
+    background: linear-gradient(rgba(57, 55, 55, 0.5), rgba(57, 55, 55, 0.5)),
+                url('./ssys.jpg') center/cover;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.back-home {
+    position: absolute;
+    font-family: 'YouYuan', sans-serif;
+    font-weight: bold;
+    left: 30px;
+    bottom: 20px;
+    font-size: 1.2em;
+    color: var(--c4);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.back-home:hover {
+    color: var(--c4);
+    transform: translateX(10px);
+}
+
+/* 通用头部样式 */
+.server-header {
+    height: 200px;
+    background: linear-gradient(rgba(57, 55, 55, 0.5), rgba(57, 55, 55, 0.5)),
+                url('./ssys.jpg') center/cover;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.back-home {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    font-size: 2em;
+    color: var(--c5);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.back-home:hover {
+    color: var(--c4);
+    transform: translateX(10px);
+}

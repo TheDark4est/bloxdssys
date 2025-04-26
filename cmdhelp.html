@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>指令教程 - 死神永生服</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 通用样式 */
+        .command-section {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* 指令介绍卡片 */
+        .intro-card {
+            background: var(--c5);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        /* 指令列表 */
+        .command-list {
+            display: grid;
+            gap: 25px;
+        }
+
+        .command-item {
+            background: var(--c5);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        /* 代码样式 */
+        code {
+            font-family: 'Consolas', monospace;
+            background: rgba(0,0,0,0.05);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: var(--c2);
+            font-size: 1.1em;
+        }
+
+        /* 学习链接 */
+        .learning-links {
+            display: grid;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .learning-card {
+            background: var(--c5);
+            padding: 20px;
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .learning-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .learning-card a {
+            color: var(--c2);
+            text-decoration: none;
+            display: block;
+        }
+
+        .learning-card a:hover {
+            color: var(--c3);
+        }
+    </style>
+</head>
+<body>
+    <header class="server-header">
+        <a href="index.html" class="back-home">死神永生服官网|指令帮助</a>
+    </header>
+
+    <main>
+        <!-- 第一部分：指令系统介绍 -->
+        <section class="command-section">
+            <div class="intro-card">
+                <h1>死神永生指令系统</h1>
+                <p>本服基于Bloxd API自研的指令系统，能够通过在聊天区输入指令，并完成一些Bloxd本不具备的功能，当前版本: 2.0</p>
+                <div class="update-log">
+                    <!-- <h3>最近更新：</h3>
+                    <ul>
+                        <li>2024.04.20 新增建筑保护指令</li>
+                        <li>2024.04.18 优化传送系统性能</li>
+                    </ul> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 第二部分：指令列表 -->
+        <section class="command-section">
+            <h2>指令列表</h2>
+            <div class="command-list">
+                <article class="command-item">
+                    <code>#ssyscmd help</code>
+                    <p>查看所有可用指令以及使用方法</p>
+                </article>
+
+                <article class="command-item">
+                    <code>#ssyscmd intro</code>
+                    <p>获得死神永生服务器的简介</p>
+                </article>
+
+                <article class="command-item">
+                    <code>#ssyscmd illegals</code>
+                    <p>获得所有可用的违禁物品，如绿宝石、砂石和干草等，请在使用前把背包清理出15个空位</p>
+                </article>
+
+                <article class="command-item">
+                    <code>#ssyscmd randtp</code>
+                    <p>随机传送到一个位置，目前有bug，可能传送到天上或者地里，我会很快更新</p>
+                </article>
+
+                <article class="command-item">
+                    <code>#ssyscmd save 0 -401 [id] [text]</code>
+                    <p>存储一段信息到死神永生硬盘。如果没有特殊用处，不要改0和-401两个数字。</p>
+                    <p>[id]是自定义的整数，也是一条信息的唯一编号。如果和其他信息的id重复了，系统会给予提示，并修改为一个未使用的id。如果有提示，请以系统提示为准</p>
+                    <p>请记住id，读取的时候要用到。</p>
+                    <p>[text]是一段字符串，可以包含数字、字母和半角(英文)符号，目前不能存储中文</p>
+                </article>
+
+                <article class="command-item">
+                    <code>#ssyscmd read 0 -401 [id]</code>
+                    <p>读取一条死神永生硬盘中的信息。如果没有特殊用处，不要改0和-401两个数字。</p>
+                    <p>[id]是目标信息的号码，是一条信息的唯一编号。如果存储时，系统给了修改id的提示，请以系统提示为准</p>
+                    <p>将在聊天区返回读取到的信息。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 第三部分：学习链接 -->
+        <section class="command-section">
+            <h2>学习Bloxd世界指令</h2>
+            <div class="learning-links">
+                <article class="learning-card">
+                    <a href="https://www.w3cschool.cn/javascript/" target="_blank">
+                        <h3>JS基本语法教学</h3>
+                        <p>W3Cschool提供的JavaScript入门教程</p>
+                    </a>
+                </article>
+
+                <article class="learning-card">
+                    <a href="https://github.com/Bloxdy/code-api" target="_blank">
+                        <h3>Bloxd官方JS教程</h3>
+                        <p>GitHub上的官方文档和示例代码(但是需要那个东西才能上</p>
+                    </a>
+                </article>
+
+                <article class="learning-card">
+                    <a href="https://space.bilibili.com/1574838650" target="_blank">
+                        <h3>dongmei_xiaomaibu_ 出的教程</h3>
+                        <p>Bloxd指令巨佬冬梅在B站更的指令教程</p>
+                    </a>
+                </article>
+
+                <article class="learning-card">
+                    <a href="https://bloxd.io/play/classic/bloxd%E5%91%BD%E4%BB%A4%E6%96%B9%E5%9D%97" target="_blank">
+                        <h3>教你指令的服务器</h3>
+                        <p>snowdi基于Bloxd官方文件建造的指令服务器</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

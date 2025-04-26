@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>更新日志 - 死神永生服</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --c1: #393737;
+            --c2: #8971d0;
+            --c3: #7dace4;
+            --c4: #95dce8;
+            --c5: #e3fff8;
+            --c6: #e98f58;
+        }
+        .update-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .update-card {
+            background: var(--c5);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+            transition: all 0.3s;
+        }
+
+        .update-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+
+        .update-title {
+            color: var(--c2);
+            margin: 0 0 15px;
+            font-size: 1.3em;
+        }
+
+        .update-date {
+            color: var(--c1);
+            opacity: 0.8;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .update-content {
+            color: var(--c1);
+            line-height: 1.6;
+        }
+
+        .update-tags {
+            margin-top: 15px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: var(--c4);
+            color: var(--c2);
+            padding: 4px 12px;
+            border-radius: 10px;
+            font-size: 0.85em;
+        }
+        .intro-content {
+            font-weight: bold;
+            color: var(--c2);
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <header class="server-header">
+        <a href="index.html" class="back-home">死神永生服官网|更新日志</a>
+    </header>
+
+    <article class="update-card">
+        <div class="intro-content">
+            <p>这里记录了死神永生部分重要更新日志及时间，但更新不一定及时</p>
+        </div>
+    </article>
+
+    <main class="update-container">
+        <article class="update-card">
+            <div class="update-date">2024.04.14</div>
+            <h2 class="update-title">防炸服部分完成</h2>
+            <div class="update-content">
+                <p>写了一个简单的防炸服指令，能检测炸服的人，并没收爆炸物。</p>
+                <p>目前不能检测月石炸药，还有待改进</p>
+            </div>
+            <div class="update-tags">
+                <span class="tag">指令</span>
+                <span class="tag">防炸服</span>
+            </div>
+        </article>
+
+        <!-- 另一个示例 -->
+        <article class="update-card">
+            <div class="update-date">2025.04.14</div>
+            <h2 class="update-title">初代指令系统</h2>
+            <div class="update-content">
+                <p>死神永生指令系统发布，包含最基本的几个指令。</p>
+            </div>
+            <div class="update-tags">
+                <span class="tag">指令</span>
+            </div>
+        </article>
+
+        <article class="update-card">
+            <div class="update-date">2025.4.12</div>
+            <h2 class="update-title">死神永生官网建立</h2>
+            <div class="update-content">
+                <p>死神永生有官网勒！</p>
+            </div>
+            <div class="update-tags">
+                <span class="tag">官网</span>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

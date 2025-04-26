@@ -34,6 +34,7 @@ SSYS
 |____script.js
 |____style.css
 |____favicon.ico
+|____ssys.jpg
 |____images
      |____favicon.png
 ```
